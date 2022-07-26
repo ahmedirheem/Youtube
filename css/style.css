@@ -1,0 +1,125 @@
+/* Start General Code */
+*{
+    padding: 0;
+    margin: 0;
+}
+:root{
+    --body: #fff;
+    --main-color: rgb(216, 216, 216);
+    --hover: rgb(221, 221, 221);
+}
+body{
+    background-color: var(--body);
+    height: 100vh;
+}
+svg{
+    width: 25px;
+    height: 25px;
+    fill: black;
+}
+/* End General Code */
+
+/* Start Nav Section */
+nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 55px;
+    width: 100%;
+    z-index: 10;
+    border-bottom: 1px solid var(--main-color);
+    background-color: var(--body);
+}
+nav .hover_eff{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.1s ease-in-out;
+}
+nav .hover_eff:hover{
+    background-color: var(--hover);
+}
+nav svg{
+    cursor: pointer;
+}
+.bowl_nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 15px;
+    height: 100%
+}
+.left_side{
+    display: flex;
+    align-items: center;
+}
+.left_side .mune_btn svg{
+    cursor: pointer;
+}
+.left_side .logo svg{
+    width: 90px;
+    height: 25px;
+    margin-left: 15px;
+    cursor: pointer;
+}
+.center_side{
+    display: flex;
+    align-items: center;
+}
+.center_side .bowl_search{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid var(--main-color)
+}
+.center_side .input_search{
+    display: flex;
+    align-items: center;
+    position: relative
+}
+.center_side .input_search input{
+    padding: 5px 10px;
+    font-size: 1.1rem;
+    outline: none;
+    border: none
+}
+.center_side .input_search .keyboard{
+    position: absolute;
+    right: 8px;
+    display: flex;
+    align-items: center;
+}
+.center_side .icon_search{
+    border-left: 1px solid var(--main-color);
+    padding: 5px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.center_side .icon_search:hover{
+    background-color: var(--main-color);
+}
+.center_side .mic_search{
+    margin: 8px 0 auto 10px
+}
+.right_side{
+    display: flex;
+    align-items: center;
+}
+.right_side .tool_user{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.right_side img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-left: 20px;
+}
+/* End Nav Section */
+
