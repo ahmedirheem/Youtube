@@ -217,4 +217,103 @@ aside.full .menu_part_two{
 }
 /* End Menu Section */
 
+/* Start Main Section */
+main{
+    position: relative;
+    top: 55px;
+    left: 240px;
+    width: calc(100% - 240px);
+    height: 1000px;
+    transition: all 0.2s ease-in-out;
+}
+main.full{
+    width: calc(100% - 110px);
+    left: 110px
+}
+.main_content{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 10px;
+    width: 97%;
+    margin: 0 auto;
+    padding: 10px
+}
+main .main_content .card{
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    height: 300px
+}
+.main_content .video_bannar{
+    position: relative
+}
+.main_content .video_bannar img{
+    width: 100%;
+    height: auto
+}
+.main_content .video_bannar .preview{
+    display: none;
+    width: 100%;
+}
+main.full .preview{
+    width: 310px
+}
+.main_content .video_bannar:hover .preview{
+    display: inline;
+}
+.main_content .video_bannar:hover .bannar{
+    display: none;
+}
+.main_content .video_bannar span{
+    font-size: 12px;
+    color: white;
+    padding: 2px;
+    background: rgba(0,0,0,0.7);
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    border-radius: 2px;
+}
+.main_content .card .info{
+    display:flex;
+    padding: 15px 0;
+}
+.main_content .card .info .logo{
+    width:40px;
+    height:40px;
+    border-radius: 50%;
+}
+.main_content .card .info .text{
+    padding: 0 15px;
+    font-size: 14px;
+}
+.main_content .card .video_title{
+    font-size: 1rem;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 2;
+}
+.main_content .card .text span{
+    display: block;
+    color: #606060;
+    font-size: 14px;
+    padding: 2px 0;
+}
+.main_content .card .text .channel{
+    position: relative;
+}
+.main_content .card .text .channel[title]:hover::after {
+    content: attr(title);
+    position: absolute;
+    top: -200%;
+    left: 0;
+    font-size: 12px;
+    color: white;
+    padding: 5px;
+    background: rgba(0,0,0,0.7);
+    border-radius: 2px;
+
+}
 /* End Main Section */
