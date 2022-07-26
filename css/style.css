@@ -6,11 +6,12 @@
 :root{
     --body: #fff;
     --main-color: rgb(216, 216, 216);
-    --hover: rgb(221, 221, 221);
+    --hover: rgb(237, 237, 237);
 }
 body{
     background-color: var(--body);
     height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
 }
 svg{
     width: 25px;
@@ -29,6 +30,7 @@ nav{
     z-index: 10;
     border-bottom: 1px solid var(--main-color);
     background-color: var(--body);
+    overflow: hidden;
 }
 nav .hover_eff{
     width: 40px;
@@ -85,7 +87,8 @@ nav svg{
     padding: 5px 10px;
     font-size: 1.1rem;
     outline: none;
-    border: none
+    border: none;
+    width: 400px
 }
 .center_side .input_search .keyboard{
     position: absolute;
@@ -123,3 +126,95 @@ nav svg{
 }
 /* End Nav Section */
 
+/* Start Menu Section */
+aside{
+    height: 100vh;
+    width: 240px;
+    position: fixed;
+    top: 55px;
+    left: 0;
+    z-index: 20;
+    background-color: var(--body);
+    transition: all 0.2s ease-in-out;
+    overflow: auto;
+
+}
+aside.full{
+    width: 110px;
+}
+aside::-webkit-scrollbar{
+    width: 5px;
+}
+aside::-webkit-scrollbar-thumb{
+    background-color: var(--main-color);
+    margin: 0 5px;
+}
+aside svg{
+    width: 25px !important;
+    height: 25px !important;
+}
+aside .menu_line{
+    display: flex;
+    align-items: center;
+    margin-top: 1px;
+    padding: 7px 20px;
+    user-select: none;
+    cursor: pointer;
+}
+aside .menu_line:hover{
+    background-color: var(--hover);
+}
+aside .menu_line .line_icon{
+    margin-right: 20px
+}
+aside .menu_line .line_title{
+    font-size: 1rem;
+}
+aside .line_div{
+    height: 1px;
+    width: 100%;
+    background-color: var(--main-color);
+    margin: 10px 0
+}
+aside .menu_part_two> p{
+    font-size: 1rem;
+    color:#60607A;
+    margin-bottom: 15px;
+    padding-left: 20px;
+}
+aside img{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+aside .text_line{
+    padding: 7px;
+    margin-bottom: 50px;
+}
+aside .text_line p{
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+aside .text_line span{
+    font-size: 14px;
+    color: #909090
+}
+aside.full .aside_content{
+    text-align: center;
+    margin-bottom: 50px;
+}
+aside.full .menu_line .line_icon{
+    margin-right: 0;
+    display: flex;
+    justify-content: center;
+}
+aside.full .menu_line{
+    display: block;
+    padding: 10px
+}
+aside.full .menu_part_two{
+    display: none;
+}
+/* End Menu Section */
+
+/* End Main Section */
